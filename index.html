@@ -6,7 +6,7 @@
   <title>GreenHaus</title>
 </head>
 
-<body style="font-family: Calibri">
+<body style="font-family: Calibri; margin: auto;">
   <style>
     /* Add a black background color to the top navigation */
     .topnav {
@@ -36,6 +36,19 @@
       background-color: #04AA6D;
       color: white;
     }
+
+    /* Right-aligned section inside the top navigation */
+    .topnav-right {
+      float: right !important;
+    }
+
+    p {
+      max-width: 80ch;
+    }
+
+    img {
+      max-width: 100vw;
+    }
   </style>
   <div class="topnav">
     <a class="active" href="./landing.html">Home</a>
@@ -43,6 +56,7 @@
     <a href="./ecohacks.html">EcoHacks</a>
     <a href="./action.html">Action</a>
     <a href="./advocacy.html">Advocacy</a>
+    <a href="./landing-spanish.html" class="topnav-right">Español</a>
   </div>
   <h2>Welcome to GreenHaus!</h2>
   <p><i>Use GreenHaus to explore climate-related data from NASA and other space agencies around the world, learn how to
@@ -56,19 +70,17 @@
     mounted on the International Space Station (ISS), launched in July 2022. It scans Earth using visible and short-wave
     infrared light.</p>
 
-  <!-- <table>
+  <table>
     <tr>
       <td><iframe width="525" height="300" src="https://www.youtube.com/embed/z9RjGdfxSDk"></iframe></td>
       <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
       <td><img src="./assets/EMIT_IRL.png" height="300px"></td>
     </tr>
-  </table> -->
-  <div style="display: grid; gap: 1rem;">
+  </table>
+  <!-- <div style="display: grid; gap: 1rem;">
     <iframe width="525" height="300" src="https://www.youtube.com/embed/z9RjGdfxSDk"></iframe>
-    <img src="./assets/EMIT_IRL.png" height="300px" style="aspect-ratio: 1202/720;">
-  </div>
-
-
+    <img src="./assets/EMIT_IRL.png" style="aspect-ratio: 1202/720;">
+  </div> -->
 
   <p><b>How is EMIT helping climate scientists?</b> Mineral dust in the atmosphere, originating from global deserts and
     carried by winds, is a crucial element of the Earth's system. These dust particles, composed of dark and light
@@ -77,14 +89,14 @@
     the Earth system and human populations, both presently and in the future. The map below shows EMIT's scan coverage:
   </p>
 
-  <img src="./assets/emit-scan-coverage.png" height="300px">
+  <img src="./assets/emit-scan-coverage.png">
 
   <p><b>What else can EMIT do?</b> It turns out that EMIT can help with more than dust sources! It's also really good at
     picking up sources of greenhouse gases, including carbon dioxide and methane. NASA has already made methane emission
     data from EMIT available (see the Data tab to learn more), and plans to do the same with carbon dioxide data soon!
     The map below shows EMIT's entire history of methane point sources.</p>
 
-  <img src="./assets/emit_methane.png" height="300px">
+  <img src="./assets/emit_methane.png">
 
   <h2>Earth data missions from global space agencies</h2>
 
