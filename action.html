@@ -1,0 +1,66 @@
+<body style="font-family: Calibri">
+    <style>
+        /* Add a black background color to the top navigation */
+        .topnav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            font-family: Calibri;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Add a color to the active/current link */
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+    </style>
+    <div class="topnav">
+        <a href="./landing.html">Home</a>
+        <a href="./data.html">Data</a>
+        <a href="./ecohacks.html">EcoHacks</a>
+        <a class="active" href="./action.html">Action</a>
+        <a href="./advocacy.html">Advocacy</a>
+    </div>
+    <h1>Take Action with Local Environmental Nonprofits</h1>
+    <p>Other parts of this site let you learn about EMIT and other Earth science missions, play with the data, and
+        advocate for the change you want to see. On this page, connect with nonprofits engaged in environmental
+        conservation and climate change mitigation in your local area, and find exciting volunteer opportunities!</p>
+
+    <b>Enter a city and state</b>: <input type="text" id="location" /> <input type="button" id="search" value="Search"
+        onclick="javascript:findLocation();" />
+
+    <br>
+    <br>
+
+    <!-- [Josh] The iframe below hard-codes an API Key for Google Maps Embed API which seems scary, but the Key is restricted to only work for that API, for which Google does not charge, so it's all good -->
+    <!-- [Josh] I'll also delete this API Key once we wrap the project just for extra warm fuzzies-->
+    <iframe id="mapView" width="600" height="450" style="border:0" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://www.google.com/maps/embed/v1/search?key=AIzaSyA6fIvfn2EnLQBHQBGdADXM9envlnDH7yA
+    &q=climate+nonprofit,Seattle+WA&center=47.6061,-122.3328&zoom=14">
+    </iframe>
+
+    <script>
+        function findLocation() {
+            var location = document.getElementById('location').value;
+            var newLocation = "https://www.google.com/maps/embed/v1/search?key=AIzaSyA6fIvfn2EnLQBHQBGdADXM9envlnDH7yA&q=environmental+nonprofits+" + location;
+            document.getElementById("mapView").src = newLocation;
+            document.getElementById("mapView").reload(true);
+        }
+    </script>
+    <hr noshade SIZE="10">
+</body>
